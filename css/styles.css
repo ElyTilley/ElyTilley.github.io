@@ -1,7 +1,81 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+
 body {
   background: url("../img/congruent_outline.png");
 }
 
+nav{
+    background: #545454;
+    width: 50%;
+    
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 2em;
+    
+    position: fixed;
+    z-index: 1;
+}
+
+nav li {
+    list-style: none;
+    display: inline;
+    
+}
+
 img {
     width: 50%
+}
+
+section {
+    background: #DBDBDB;
+    margin: 0 auto;
+    width: 50%;
+    border: .5em solid #4BC3BF;
+    padding: 1em;
+    
+    position: relative;
+}
+
+section img {
+    float: right;
+    width: 50%;
+    margin: 1em;
+}
+
+section h3 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 2em;
+}
+
+section p {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.5em;
+    
+}
+
+section blockquote {
+    text-align: center;
+    font-family: 'Josefin Sans', sans-serif;
+    font-style: italic;
+    font-size: 1.2em;
+    
+}
+
+section:before,
+section:after{
+    content: "";
+    display: table;
+}
+
+section:after{
+    clear:both;
+}
+
+a:link,
+a:visited{
+    color: #e27827;
+    text-decoration: none;
+}
+
+a:hover{
+    color: #4bc3bf;
 }
