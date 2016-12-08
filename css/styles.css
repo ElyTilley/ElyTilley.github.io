@@ -1,12 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
 
 body {
-  background: url("../img/congruent_outline.png");
+  background: url("../img/dark-grungewall.png");
 }
 
+/*Navigation Bar*/
 nav{
-    background: #545454;
-    width: 50%;
+    background: rgba(84,84,84,1);
+    width: 42%;
     
     font-family: 'Josefin Sans', sans-serif;
     font-size: 2em;
@@ -15,21 +16,83 @@ nav{
     z-index: 1;
 }
 
+/*Navigation List*/
 nav li {
     list-style: none;
-    display: inline;
+    display: inline-flex;
+        
+}
+
+/*Navigation Animations*/
+nav a:link,
+nav a:visited{
+    color: #e27827;
+    text-decoration: none;
+    transition: color .25s;
     
 }
-
-img {
-    width: 50%
+nav a:hover{
+    color: #4bc3bf;
+    transition: color .25s;
 }
 
+/*Gallery*/
+gallery {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+/*Gallery Boxes*/
+figure{
+    background: #e27827;
+    padding: 1em;
+    flex: 1 0 80%;
+    
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/*Overlay                                          Help  */
+.overlay {
+    display: none;
+    
+/*Overlay Style*/
+    background: rgba(226, 120, 39, .5);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/*Overlay Show                                     Not Done */
+.overlay:target {
+    display: block;
+    
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    min-height: 50vh;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Overlay Close Button                             Not Done */
+.overlay a {
+    color: black;
+    font-family: 'Josefin Sans', sans-serif;
+    text-decoration: none;
+    font-size: 2em;
+}
+
+/*Section Styling*/
 section {
     background: #DBDBDB;
     margin: 0 auto;
     width: 50%;
-    border: .5em solid #4BC3BF;
+    border: .5em solid #e27827;
     padding: 1em;
     
     position: relative;
@@ -41,6 +104,7 @@ section img {
     margin: 1em;
 }
 
+/*Section Elements*/
 section h3 {
     font-family: 'Josefin Sans', sans-serif;
     font-size: 2em;
@@ -65,17 +129,8 @@ section:after{
     content: "";
     display: table;
 }
-
 section:after{
     clear:both;
 }
 
-a:link,
-a:visited{
-    color: #e27827;
-    text-decoration: none;
-}
 
-a:hover{
-    color: #4bc3bf;
-}
