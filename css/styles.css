@@ -6,8 +6,8 @@ body {
 
 /*Navigation Bar*/
 nav{
-    background: rgba(84,84,84,1);
-    width: 42%;
+    background: rgba(84,84,84,0);
+    width: 2em;
     
     font-family: 'Josefin Sans', sans-serif;
     font-size: 2em;
@@ -16,12 +16,33 @@ nav{
     z-index: 1;
 }
 
-/*Navigation List*/
-nav li {
-    list-style: none;
-    display: inline-flex;
-        
+nav img{
+    background: #e27827;
+    border-radius: 50%;
+    width: 1em;
 }
+
+nav ul {
+	padding: 0;
+    margin: 0;
+	list-style: none;
+	position: relative;
+}
+
+
+/*Navigation List*/
+nav ul li {
+	display:inline-block;
+	background-color: rgba(84,84,84,.5);
+	}
+
+nav a{
+    display: block;
+    padding: 0 .5em;
+    line-height: 2em;
+    color:#e27827;
+}
+
 
 /*Navigation Animations*/
 nav a:link,
@@ -31,10 +52,39 @@ nav a:visited{
     transition: color .25s;
     
 }
+
+nav a:target,
 nav a:hover{
+    background-color: rgba(84,84,84,1);
     color: #4bc3bf;
-    transition: color .25s;
+    transition: all .25s;
 }
+
+/* Hide Dropdowns by Default */
+nav ul ul {
+	display: none;
+	position: absolute; 
+	
+}
+
+/* Display Dropdowns on Hover */
+nav ul li:hover > ul {
+	display:inherit;
+}
+
+/* Fisrt Tier Dropdown */
+nav ul ul li {
+	width:5em;
+	float:none;
+	display:list-item;
+	position: relative;
+}
+
+
+
+
+
+
 
 /*Gallery*/
 gallery {
@@ -54,7 +104,7 @@ figure{
     align-items: center;
 }
 
-/*Overlay                                          Help  */
+/*Overlay*/
 .overlay {
     display: none;
     
@@ -67,7 +117,7 @@ figure{
     left: 0;
 }
 
-/*Overlay Show                                     Not Done */
+/*Overlay Show*/
 .overlay:target {
     display: block;
     
@@ -79,12 +129,19 @@ figure{
     align-items: center;
 }
 
-/*Overlay Close Button                             Not Done */
+/*Overlay Close Button*/
 .overlay a {
     color: black;
     font-family: 'Josefin Sans', sans-serif;
     text-decoration: none;
     font-size: 2em;
+}
+
+.overlay img{
+    
+    width: 80%;
+    max-width: 70%;
+    
 }
 
 /*Section Styling*/
@@ -120,7 +177,7 @@ section blockquote {
     text-align: center;
     font-family: 'Josefin Sans', sans-serif;
     font-style: italic;
-    font-size: 1.2em;
+    font-size: 2em;
     
 }
 
@@ -133,4 +190,41 @@ section:after{
     clear:both;
 }
 
+
+form {
+  width: 60%;
+  background: #dbdbdb;
+  padding: 1em;
+  margin: 0 auto ;
+  border: 1em solid #e27827;
+  position: relative;
+    
+}
+
+label, 
+input,
+textarea {
+  font-family: 'Josefin Sans', sans-serif;
+    font-size: 1em;
+  display: block;
+  margin: 1em;
+    transition: all .25s;
+}
+
+/* Score: 0,0,1,1 */
+input[type=submit] {
+  background: #454545;
+  border: 1em;
+  border-radius: 4px;
+  color: #e27827;
+  padding: 1em;
+}
+
+input:focus, 
+textarea:focus {
+  background: #e27827;
+  color: #454545;
+  padding: 1em;
+  outline: none;
+}
 
